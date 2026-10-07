@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Event Sync Service</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Event Sync Service</h1>
+    <p class="subtitle">
+      Unified meeting view reconciled from the CRM and Calendar sources.
+      Every field shows where its value came from.
+    </p>
+  </header>
+
+  <section id="stats" class="stats"></section>
+
+  <section class="controls">
+    <label>
+      Source
+      <select id="filter-source">
+        <option value="">All</option>
+        <option value="crm">CRM</option>
+        <option value="calendar">Calendar</option>
+      </select>
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" id="filter-conflicts" />
+      Conflicts only
+    </label>
+    <label>
+      From
+      <input type="date" id="filter-from" />
+    </label>
+    <label>
+      To
+      <input type="date" id="filter-to" />
+    </label>
+    <button id="reset">Reset</button>
+  </section>
+
+  <main>
+    <table id="meetings">
+      <thead>
+        <tr>
+          <th>Meeting</th>
+          <th>When</th>
+          <th>Sources</th>
+          <th>Confidence</th>
+          <th>Flags</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <p id="empty" class="empty" hidden>No meetings match the current filters.</p>
+  </main>
+
+  <aside id="detail" class="detail" hidden>
+    <button id="close-detail" class="close" aria-label="Close">&times;</button>
+    <div id="detail-body"></div>
+  </aside>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
