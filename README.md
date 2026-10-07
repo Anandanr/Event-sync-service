@@ -245,6 +245,15 @@ on coverage percentage:
 - expected match/conflict counts (regression guard on the whole pipeline)
 - API filters, error codes, and idempotent re-ingestion
 
+### Test results
+
+`31 passed, 0 failed`, verified at commit `15f89b6`. Reconciliation was also
+cross-validated with an independent second implementation of the matcher:
+17/17 matches agreed, zero false positives, 42/42 source records covered.
+Full evidence — test inventory, oracle methodology, API smoke-test matrix, and
+browser checks — is in
+[`docs/testing-results.md`](docs/testing-results.md).
+
 ---
 
 ## Known limitations / what I'd do next
