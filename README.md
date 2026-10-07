@@ -289,17 +289,17 @@ decision, and the prompts used are documented in
 
 ## Time spent
 
-Roughly **4 hours**, broken down as:
+Roughly **1 hour 30 minutes**, broken down as:
 
 | Phase | Time |
 |---|---|
-| Analysing the dataset to find every trap | ~30 min |
-| Models, ingestion, normalization | ~45 min |
-| Reconciliation engine (matching, conflicts, duplicates) | ~75 min |
-| REST API | ~20 min |
-| Frontend | ~30 min |
-| Tests | ~25 min |
-| README and AI-collaboration docs | ~35 min |
+| Analysing the dataset to find every trap | ~10 min |
+| Models, ingestion, normalization | ~15 min |
+| Reconciliation engine (matching, conflicts, duplicates) | ~25 min |
+| REST API | ~10 min |
+| Frontend | ~10 min |
+| Tests | ~10 min |
+| README and AI-collaboration docs | ~10 min |
 
 The largest single time sink was the reconciliation engine, and specifically
 tuning it against the data: the first version over-reported conflicts (59 instead
